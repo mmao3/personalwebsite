@@ -1,0 +1,150 @@
+<div class="homepage padding2">
+    <div class="homeTop">
+
+        <div class="carousel-demo absolute">
+            <ul rn-carousel rn-carousel-index="carouselIndex2" rn-carousel-auto-slide rn-carousel-pause-on-hover
+                rn-carousel-buffered class="carousel2">
+                <li ng-repeat="slide in images track by slide.id" ng-class="'id-' + slide.id">
+                    <div ng-style="{'background-image': 'url(' + slide.image + ')'}" class="bgimage">
+                    </div>
+                </li>
+            </ul>
+            <div class="rn-carousel-indicator custom-indicator">
+                <span ng-repeat="slide in images" ng-class="{active: $index==$parent.carouselIndex2}"
+                      ng-click="$parent.carouselIndex2 = $index">●</span>
+            </div>
+        </div>
+        <div class="intro absolute">
+            <h3 class="font_3 ">
+            <span class="color_2">
+                <span>{{hello}},</span>
+            </span>
+            </h3>
+            <h5 class="font_5 ">
+            <span class="color_2">
+               {{home_avail}}
+            </span>
+            </h5>
+
+            <p class="font_8"></p>
+
+            <p class="font_8">{{home_self}} </p>
+        </div>
+        <div class="avail absolute">
+            <p class="font_8">
+                <span class="color_2">{{home_af}}</span>
+            </p>
+
+            <p class="font_8">{{home_wd}}</p>
+
+            <p class="font_8">{{home_jd}}</p>
+
+            <p class="font_8">{{home_sd}}</p>
+
+            <p class="font_8">{{home_fs}}</p>
+
+            <p>&nbsp;</p>
+
+            <p class="font_8">
+            <span class="color_2">
+                <span>&#65279;{{home_ws}}</span>
+            </span>
+            </p>
+
+            <p class="font_8">
+                <span>&#65279;http://www.maomao.work</span>
+            </p>
+
+            <p>&nbsp;</p>
+
+            <p class="font_8">
+            <span class="color_2">
+                <span>&#65279;{{home_dh}}</span>
+            </span>
+            </p>
+
+            <p class="font_8">
+                <span>&#65279;607-651-8828</span>
+            </p>
+
+            <p>&nbsp;</p>
+
+            <p class="font_8">
+            <span class="color_2">
+                <span>&#65279;{{home_yx}}</span>
+            </span>
+            </p>
+
+            <p class="font_8">
+                <span>&#65279;mmao3@binghamton.edu</span>
+            </p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            <p class="font_8">
+            <span class="color_2">
+                <span>&#65279;{{home_sj}}</span>
+            </span>
+            </p>
+        </div>
+        <div class="socialLink absolute">
+            <a href="https://www.facebook.com/jed.mao.9" target="_blank"><img class="pointer"
+                                                                              src="images/facebook33.00_png_srz"></a>&nbsp;
+            <a href="https://twitter.com/dongfangMao" target="_blank"><img class="pointer"
+                                                                           src="images/twitter33.00_png_srz"></a>&nbsp;
+            <a href="https://plus.google.com/108823316356153881711/posts" target="_blank"><img class="pointer"
+                                                                                               src="images/google33.00_png_srz"></a>&nbsp;
+            <a href="https://www.linkedin.com/pub/mao-mao/104/65/b29" target="_blank"><img class="pointer"
+                                                                                           src="images/linkedIn33.00_png_srz"></a>
+        </div>
+        <div class="myCV absolute">
+            <button ng-click="goToCV()">
+                <span class="buttonText">{{home_cv}}</span>
+            </button>
+        </div>
+
+    </div>
+    <div class="homeBottom marginTop">
+        <div class="strengths absolute">
+            <p class="font_7">
+              <span class="color_2">
+                 {{home_st}}
+              </span>
+            </p>
+
+            <p class="font_7">&nbsp;</p>
+
+            <p class="font_8"> {{home_stc}}</p>
+        </div>
+        <div class="line1 absolute line">
+        </div>
+        <div class="quote absolute">
+            <p class="font_7">
+              <span class="color_2">
+                   {{home_qt}}
+              </span>
+            </p>
+
+            <p class="font_7">&nbsp;</p>
+
+            <p class="font_8"> {{home_qtc}}</p>
+        </div>
+        <div class="line2 absolute line">
+        </div>
+        <div class="recent absolute">
+            <p class="font_7">
+              <span class="color_2">
+                   {{home_rp}}
+              </span>
+            </p>
+
+            <p class="font_7">&nbsp;</p>
+
+            <p class="font_8"> {{home_rpc}}</p>
+        </div>
+    </div>
+
+
+</div>

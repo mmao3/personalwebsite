@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<style>
+			#outter {
+				position: relative;
+				width:100px;
+				height1:50px;
+				box-sizing: border-box;
+				overflow-y: scroll;
+				overflow-x: scroll;
+			}
+			#inner {
+				position: absolute;
+				left:0px;
+				top: 2px;
+			}
+			#inner1 {
+				position: absolute;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="outter">
+			<div id="inner">
+
+			</div>
+			<div id="inner1">
+			</div>
+		</div>
+	</body>
+</html>

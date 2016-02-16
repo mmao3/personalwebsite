@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html data-ng-app="app" id="app" ng-cloak ng-controller="mainCtrl">
+<head lang="en">
+<meta http-equiv="Content-Type" Content="text/html; charset=utf-8">
+<title>MAO MAO</title>
+<link rel="stylesheet" type="text/css"
+	href="styles/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<link rel="stylesheet" type="text/css"
+	href="styles/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css"
+	href="styles/angular-carousel.css" />
+<link rel="stylesheet" type="text/css" href="styles/carousel.css" />
+<link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="styles/evol.colorpicker.min.css" />
+</head>
+<body>
+
+	<header>
+		<div class="navbar ">
+			<div class="container meta-container">
+				<div class="navbar-left ">
+					<h1 class="font_0">
+						MAO&nbsp;<span class="color_1">MAO&#8203;</span>
+					</h1>
+					<h6 class="font_6">
+						<span class="color_2">Software Developer for Hire</span>
+					</h6>
+
+				</div>
+				<div class="navbar-right ">
+					<div class="right  language"
+						ng-click="changeLanguage(selected.code)">
+						<i class="fa fa-globe color_3 "></i> &nbsp; <select
+							ng-model="selected"
+							ng-init="selected=(getItem() ? (getItem()==='en' ? langItems[0] : langItems[1]): langItems[0])"
+							ng-options="item.name for item in langItems"></select> <span
+							class="pointer text"> <b>{{selected.name}}</b></span>
+
+					</div>
+					<div class="menu-nav">
+						<div class="menu-item ">
+							<div class="menu-text-wrapper">
+								<div class="menu-text">
+									<a href="#home" ng-class="{ 'clicked': home1 }"
+										ng-click="changeColor('home1')">{{home}}</a>
+								</div>
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-text-wrapper">
+								<div class="menu-text">
+									<a href="#cv" ng-class="{ 'clicked': cv1 }"
+										ng-click="changeColor('cv1')">{{cv}}</a>
+								</div>
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-text-wrapper">
+								<!--<div class="menu-text"><select  ng-class="{ 'clicked': projects1 }"-->
+								<!--ng-click="changeColor('projects1')">{{projects}}</select></div>-->
+								<div class="dropdown">
+									<div class="dropdown-toggle menu-text"
+										ng-class="{ 'clicked': projects1 }"
+										ng-click="changeColor('projects1')" data-toggle="dropdown">
+										{{projects}} <span class="caret"></span>
+									</div>
+									<ul class="dropdown-menu">
+										<li class="dropdown-submenu">
+										   <a href="javascript:;">{{project_break}}</a>
+											<ul class="dropdown-menu">
+												<li><a tabindex="-1" href="http://breakout.maomao.work" target="_blank">{{project_demo}}</a></li>
+												<li><a tabindex="-1" href="https://github.com/mmao3/breakout" target="_blank">{{project_code}}</a></li>
+											</ul>
+										</li>
+
+										<li><a href="https://github.com/mmao3/bank" target="_blank">{{project_bank}}</a></li>
+										<li><a href="https://github.com/mmao3/personalwebsite/" target="_blank">{{project_pw}}</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="menu-item diary">
+							<div class="menu-text-wrapper">
+								<div class="menu-text">
+									<a href="#life" ng-class="{ 'clicked': life1 }"
+										ng-click="changeColor('life1')">随笔</a>
+								</div>
+							</div>
+						</div>
+						<div class="menu-item">
+							<div class="menu-text-wrapper">
+								<div class="menu-text">
+									<a href="#contacts" ng-class="{ 'clicked': contacts1 }"
+										ng-click="changeColor('contacts1')">{{contacts}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container meta-container mainContent">
+
+		<div ng-view></div>
+
+	</div>
+
+
+	<footer class="marginTop">
+		<div class="container meta-container ">
+			<div class="float_left align">
+				<span class="font_9">&copy;2016 by MAO MAO</span>
+			</div>
+			<div class="float_right align">
+				<a href="https://www.facebook.com/jed.mao.9" target="_blank"><img
+					class="pointer" src="images/facebook_26.00_png_srz"></a>&nbsp; <a
+					href="https://twitter.com/dongfangMao" target="_blank"><img
+					class="pointer" src="images/twitter_26.00_png_srz"></a>&nbsp; <a
+					href="https://plus.google.com/108823316356153881711/posts"
+					target="_blank"><img class="pointer"
+					src="images/google_26.00_png_srz"></a>&nbsp; <a
+					href="https://www.linkedin.com/pub/mao-mao/104/65/b29"
+					target="_blank"><img class="pointer"
+					src="images/linkedIn_26.00_png_srz"></a>
+			</div>
+		</div>
+	</footer>
+	<script src="scripts/FileSaver.min.js"></script>
+	<script src="scripts/angular.js"></script>
+	<script src="scripts/angular-route.js"></script>
+	<script src="scripts/angular-touch.js"></script>
+	<script src="scripts/angular-carousel.js"></script>
+	<script src="scripts/jquery-2.1.4.min.js"></script>
+	<script src="scripts/jquery-ui.min.js"></script>
+	<script src="scripts/evol.colorpicker.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="app/app.js"></script>
+	<script src="resource/en.js"></script>
+	<script src="resource/zh.js"></script>
+	<script src="app/services/util.js"></script>
+	<script src="app/controllers/mainCtrl.js"></script>
+	<script src="scripts/dirPagination.js"></script>
+</body>
+</html>

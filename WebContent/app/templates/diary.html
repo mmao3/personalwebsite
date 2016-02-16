@@ -1,0 +1,62 @@
+<div class="diaryItem padding4">
+    <div class="diaryList_content_them1" ng-class="{'diaryList_content_them2': currentDiary.them2==='true'}">
+        <div class="listTop listTop_them1" ng-class="{ 'listTop_them2': currentDiary.them2==='true'}">
+            <span>日志</span>
+            <span class="right color4 pointer" ng-click="goToAllDiaries()">返回日志列表</span>
+
+        </div>
+        <div class="seond_top">
+            <span class="font26 marginRight1">{{currentDiary.title}}</span>
+            <span class="date_year color5 marginRight2">{{getYear(currentDiary.date)}}</span>
+            <span class="date_minute color5">{{getHour(currentDiary.date)}}</span>
+
+        </div>
+        <div class="third_top margin_bottom3">
+            <span class="icon icon_praise inline marginRight2" ng-class="{ 'pointer': isRated!=='true' }" ng-click="setRating()"></span>
+            <span class="zan color6">赞({{rate}})</span>
+        </div>
+        <div class="diaryList_nr">
+            <div class="diaryList_zw" style="white-space: pre-line" >
+              
+            </div>
+
+        </div>
+
+        <div class="third_top margin_bottom3">
+            <span class="icon icon_praise inline marginRight2" ng-class="{ 'pointer': isRated!=='true' }" ng-click="setRating()"></span>
+            <span class="zan color6">赞({{rate}})</span>
+        </div>
+        <div class="pinglun">
+            <span>评论({{comments.length}})</span>
+        </div>
+        <div class="">
+            <div class="dcommment">
+                <ul dir-paginate="comment in comments | itemsPerPage: 5" class="borderTop">
+                    <li class="media">
+                        <div class="">
+                            <div class="color7">
+                                <span class="ip marginRight4">{{comment.ip}}</span>
+                                <span class="date_year  marginRight3" >{{getYear(comment.date)}}</span>
+                                <span class="date_minute ">{{getHour(comment.date)}}</span>
+                            </div>
+                            <div class="dcontent">{{comment.comment}}</div>
+
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="text-center">
+                <dir-pagination-controls boundary-links="true"></dir-pagination-controls>
+            </div>
+            <div class="addComment" contenteditable="true">
+
+            </div>
+            <button type="button"  class="addcms" ng-click="addComments()">发表</button>
+
+        </div>
+
+    </div>
+
+
+</div>

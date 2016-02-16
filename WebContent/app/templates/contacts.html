@@ -1,0 +1,51 @@
+<div class="contact padding1">
+    <h2 class="font_2 marginZero">{{contacts_con}}</h2>
+
+    <div class="info absolute">
+        <h6 class="font_6 alignLeft">
+            <span class="color_2 linHeight1">MAO MAO</span>
+        </h6>
+        <h6>
+            &nbsp;
+        </h6>
+
+        <p class="font_8">25 Palatine, APT 456.</p>
+
+        <p class="font_8">Irvine, CA 92612</p>
+
+        <p class="font_8">&nbsp;</p>
+
+        <p class="font_8">{{home_dh}}&nbsp;607-651-8828</p>
+
+        <p class="font_8">&nbsp;</p>
+
+        <p class="font_8">{{home_yx}}&nbsp;
+            <span class="color_2">mmao3@binghamton.edu</span></p>
+    </div>
+    <div class="socialLink absolute">
+        <a href="https://www.facebook.com/jed.mao.9" target="_blank"><img class="pointer"
+                                                                          src="images/facebook33.00_png_srz"></a>&nbsp;
+        <a href="https://twitter.com/dongfangMao" target="_blank"><img class="pointer"
+                                                                       src="images/twitter33.00_png_srz"></a>&nbsp;
+        <a href="https://plus.google.com/108823316356153881711/posts" target="_blank"><img class="pointer"
+                                                                                           src="images/google33.00_png_srz"></a>&nbsp;
+        <a href="https://www.linkedin.com/pub/mao-mao/104/65/b29" target="_blank"><img class="pointer"
+                                                                                       src="images/linkedIn33.00_png_srz"></a>
+    </div>
+    <div class="emailForm absolute">
+        <div class="greeting">
+            <p class="font_7">{{contacts_look}}</p>
+        </div>
+        <form ng-submit="sendMail()">
+            <input type="text" name="name" placeholder="{{contacts_name}}" ng-model="send.name" ng-class="nameClass" ng-blur="verifyName()">
+            <input type="text" name="email" placeholder="{{contacts_email}}" ng-model="send.email"  ng-class="emailClass" ng-blur="verifyEmail()">
+            <input type="text" name="subject" placeholder="{{contacts_subject}}" ng-model="send.subject"  ng-class="subjectClass" ng-blur="verifySubject()">
+            <textarea name="message" placeholder="{{contacts_message}}" ng-model="send.message"  ng-class="messageClass" ng-blur="verifyMessage()"></textarea>
+            <input class="button" type="submit" value="{{contacts_send}}">
+            <span class="loading" ng-hide="!isSubmited" ></span>
+        </form>
+
+    </div>
+
+
+</div>
