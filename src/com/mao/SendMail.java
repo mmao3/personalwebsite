@@ -13,6 +13,11 @@ import javax.mail.PasswordAuthentication;
 
 public class  SendMail{
 
+
+
+
+    
+
 	static Properties mailServerProperties;
 	static Session getMailSession;
 	static MimeMessage generateMailMessage;
